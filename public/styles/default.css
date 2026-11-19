@@ -1,0 +1,254 @@
+body {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    background-color: #eee8f0;
+    color: #352d3b;
+    font-family: Verdana, Geneva, sans-serif;
+    line-height: 1.7;
+}
+
+header {
+    padding: 2rem 0 1.25rem;
+    border-bottom: 3px solid #76547c;
+    text-align: center;
+}
+
+h1 {
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    color: #56325f;
+    line-height: 1.25;
+    margin: 0 0 1rem;
+    font-size: clamp(1.6rem, 4vw, 2rem);
+}
+
+h2 {
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    color: #56325f;
+    line-height: 1.25;
+    margin-top: 0;
+    font-size: 1.6rem;
+}
+
+h6 {
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-size: 1.5rem;
+    color: #56325f;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+main {
+    padding: 2rem 0;
+}
+
+p,
+ul {
+    text-align: left;
+}
+
+blockquote p {
+    text-align: center;
+}
+
+li {
+    margin-bottom: 0.75rem;
+}
+
+li ul {
+    margin-top: 0.75rem;
+}
+
+a,
+a:visited {
+    color: #65376d;
+    text-decoration: underline;
+}
+
+a:hover,
+a:focus {
+    color: #3f2146;
+}
+
+a:focus-visible {
+    outline: 2px solid #65376d;
+    outline-offset: 3px;
+}
+
+nav {
+    line-height: 2.2;
+}
+
+nav a {
+    display: inline-block;
+}
+
+figure {
+    margin: 1.5rem auto;
+    text-align: center;
+}
+
+figure img {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto;
+}
+
+figcaption {
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+footer {
+    padding: 1.25rem 0 2rem;
+    border-top: 2px solid #76547c;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.about-intro {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.about-intro section {
+    flex: 1;
+}
+
+.about-intro figure {
+    width: 180px;
+    max-width: 100%;
+    flex-shrink: 0;
+    margin: 0 auto;
+}
+
+.about-lists {
+    margin-top: 1rem;
+}
+
+.about-heading {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    color: #56325f;
+    line-height: 1.25;
+}
+
+.about p,
+.about ul {
+    margin-top: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.about li {
+    margin-bottom: 0.25rem;
+}
+
+.about-lists {
+    display: flex;
+    gap: 2rem;
+}
+
+.about-lists section {
+    flex: 1;
+    min-width: 0;
+}
+
+.home-intro {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.home-intro section {
+    flex: 1;
+    min-width: 0;
+}
+
+.home-intro figure {
+    width: 300px;
+    max-width: 100%;
+    flex-shrink: 0;
+    margin: 1rem auto;
+}
+
+.contract-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 240px);
+    align-items: start;
+    gap: 2rem;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.contract-layout > figure {
+    width: 100%;
+    max-width: 240px;
+    margin: 1rem auto 0;
+}
+
+@media (max-width: 800px) {
+    .contract-layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+.contract-card {
+    box-sizing: border-box;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: clamp(1.25rem, 4vw, 2rem);
+    background-color: #f8f5f9;
+    border: 1px solid #c8b9cd;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(53, 45, 59, 0.06);
+    line-height: 1.8;
+}
+
+.contract-card > :where(p) {
+    margin: 0 0 1.25rem;
+}
+
+.contract-signature {
+    margin: 1.75rem 0 0;
+    padding-top: 1rem;
+    border-top: 1px solid #c8b9cd;
+    color: #56325f;
+    font-weight: 600;
+}
+
+@media (max-width: 600px) {
+    .home-intro {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .about-intro,
+    .about-lists {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    body {
+        padding: 0 1rem;
+    }
+
+    header {
+        padding-top: 1.25rem;
+    }
+
+    main {
+        padding: 1.5rem 0;
+    }
+
+    ul {
+        padding-left: 1.25rem;
+    }
+}
+nav a[aria-current="page"] {
+    text-decoration-thickness: 0.15em;
+}
