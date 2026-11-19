@@ -8,6 +8,7 @@ export default defineConfig({
     appType: "mpa",
     oxc: { jsx: { runtime: "automatic" } },
     build: {
+        target: "es2019",
         rolldownOptions: {
             input: ["index.html", "introduction.html", "contract.html", "about.html"]
                 .map((file) => resolve(import.meta.dirname, file)),
